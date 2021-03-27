@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
+
   <body class="page__body">
+
     <header class="page-header">
+
       <a class="page-header__logo">
-        <img src="img/mobile/pink-logo.svg" width="74" height="23" alt="Лготип приложения Пинк">
+        <img src="img/mobile/pink-logo.svg" width="74" height="23" alt="Логотип приложения Пинк">
       </a>
+
       <nav class="main-navigation">
+
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
@@ -35,8 +41,169 @@
             </li>
           </ul>
         </div>
+
       </nav>
+
     </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Приложение Пинк</h1>
+
+      <section class="download-links">
+        <div class="download-links__wrapper">
+
+          <h2 class="visually-hidden">Ссылки для загрузки приложения Пинк</h2>
+
+          <p class="download-links__slogan">Взгляните<br> на жизнь<br> иначе!</p>
+          <a class="download-links__button" href="https://apple.com/ru/app-store/">Скачать приложение</a>
+          <ul class="downloads-links__available-stores-list">
+            <li>
+              <a class="downloads-links__available-stores-item" href="https://apple.com/ru/app-store/">
+                <img src="img/apple-logo.svg" width="47" height="56" alt="Ссылка на магазин App Store">
+              </a>
+            </li>
+            <li>
+              <a class="downloads-links__available-stores-item" href="https://play.google.com/store/apps?hl=ru&gl=US">
+                <img src="img/android-logo.svg" width="43" height="47" alt="Ссылка на магазин Google Play">
+              </a>
+            </li>
+            <li>
+              <a class="downloads-links__available-stores-item" href="https:https://www.microsoft.com/ru-RU/store/apps">
+                <img src="img/microsoft-logo.svg" width="44" height="41" alt="Ссылка на магазин Microsoft Store">
+              </a>
+            </li>
+          </ul>
+          <p class="downloads-links__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+          <p class="download-links__slogan">Устали от серости<br> мегаполиса?</p>
+          <p class="download-links__slogan">Нам есть, что вам<br> предложить!</p>
+
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__wrapper">
+
+          <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
+
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--fun">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantagees__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title advantages__item--change">Меняет мир вокруг</h3>
+              <p class="advantagees__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title advantages__item--friends">Заводит новых друзей</h3>
+              <p class="advantagees__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+
+          <div class="advantages__effect">
+            <h3 class="advantages__title effect-title">Эффект на 24 часа!</h3>
+            <p class="advantagees__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="advantages__effect-link" href="#">Узнать больше об исследовании</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__wrapper slider">
+
+          <h2 class="visually-hidden">Отзывы о приложении Пинк</h2>
+
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item slider__item--current">
+              <div class="reviews__item-info">
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+                <p class="reviews__author-info">25 лет, водитель трамвая</p>
+              </div>
+            </blockquote>
+            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__next" type="button">Следующий отзыв</button>
+          </div>
+
+          <p class="rewievs__toggles slider-toggles">
+            <button class="slider-toggle slider-toggle--current" type="button" aria-label="первый слайд">1</button>
+            <button class="slider-toggle" type="button" aria-label="второй слайд">2</button>
+            <button class="slider-toggle" type="button" aria-label="третий слайд">3</button>
+          </p>
+
+        </div>
+      </section>
+
+      <section class="price-map">
+        <div class="price-map__wrapper">
+
+          <h2 class="visually-hidden">Стоимость приложения Пинк</h2>
+
+          <table class="price-map__tarrifs slider">
+            <caption class="visually-hidden">Прайс-лист</caption>
+            <tr class="price-map__tariffs-list slider__list">
+              <th class="price-map__tariffs-item disabled-cell"></th>
+              <th class="price-map__tariffs-item slider__item">База<br><span>1,99 USD</span></th>
+              <th class="price-map__tariffs-item slider__item slider__item--current tariff-hit">Стандарт<br><span>3,99 USD</span></th>
+              <th class="price-map__tariffs-item slider__item">Анлим<br><span>9,99 USD</span></th>
+            </tr>
+            <tr class="price-map__option-item">
+              <th class="price-map__option-name">Розовый фильтр</th>
+              <th class="price-map__option-availability-true slider__item">true</th>
+              <th class="price-map__option-availability-true slider__item slider__item--current">true</th>
+              <th class="price-map__option-availability-true slider__item">true</th>
+            </tr>
+            <tr class="price-map__option-item">
+              <th class="price-map__option-name">Смайлики</th>
+              <th class="price-map__option-availability-false slider__item">false</th>
+              <th class="price-map__option-availability-true slider__item slider__item--current">true</th>
+              <th class="price-map__option-availability-true slider__item">true</th>
+            </tr>
+            <tr class="price-map__option-item">
+              <th class="price-map__option-name">Комментарии</th>
+              <th class="price-map__option-availability-false slider__item">false</th>
+              <th class="price-map__option-availability-false slider__item slider__item--current">false</th>
+              <th class="price-map__option-availability-true slider__item">true</th>
+            </tr>
+          </table>
+
+          <p class="price-map__toggles slider-toggles">
+            <button class="slider-toggle" type="button" aria-label="первый слайд">1</button>
+            <button class="slider-toggle slider-toggle--current" type="button" aria-label="второй слайд">2</button>
+            <button class="slider-toggle" type="button" aria-label="третий слайд">3</button>
+          </p>
+
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__wrapper">
+
+          <h2 class="visually-hidden">Контакты</h2>
+
+          <p class="contacts__slogan">Остались вопросы?<br>Свяжитесь с нами!</p>
+
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__contact-method">Звоните:</p>
+              <a class="contacts__phone" href="tel:+78125556666">+7 (812)555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__contact-method">Пишите:</p>
+              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__contact-method">Приезжайте в гости:</p>
+              <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+
+    </main>
 
   </body>
 </html>
