@@ -173,22 +173,24 @@
             <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
           </div>
 
-          <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="POST">
+          <form class="photo-editor" action="https://echo.htmlacademy.ru" method="POST">
 
-            <div class="photo-editor__form-upload">
-              <!-- Добавить фоновую картинку в стилях -->
-              <input type="image" id="user-photo" name="user-photo" width="280" height="374" alt="Загрузка и предпросмотр вашего изображения">
+            <div class="photo-editor__upload">
+              <label class="photo-editor__drop-zone" for="user-photo">
+                <img src="img/photo-7.jpg" alt="Выберите изображение для загрузки и предпросмотра" width="280" height="374">
+              </label>
+              <input class="photo-editor__input visually-hidden" type="file" id="user-photo" name="user-photo" accept="image/png, image/jpg, image/gif, image/svg, image/jpeg">
             </div>
 
-            <ul class="photo-editor__photo-tuning-labels-list">
-              <li class="photo-editor__photo-tuning-labels-list-item--active">
+            <ul class="photo-editor__tuning-labels-list">
+              <li class="photo-editor__tuning-labels-list-item--active">
                 <label for="crop-filter">
                   <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#D22856"/>
                   </svg>
                 </label>
               </li>
-              <li class="photo-editor__photo-tuning-labels-list-item">
+              <li class="photo-editor__tuning-labels-list-item">
                 <label for="fill-filter">
                   <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
@@ -198,7 +200,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="photo-editor__photo-tuning-labels-list-item">
+              <li class="photo-editor__tuning-labels-list-item">
                 <label class="visually-hidden" for="contrast-filter">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
@@ -210,15 +212,15 @@
               </li>
             </ul>
 
-            <ul class="photo-editor__photo-tuning-list">
-              <li class="photo-editor__photo-tuning-list-item--activ">
-                <input class="photo-editor__photo-tuning-list-item__crop-filter" id="crop-filter" name="crop-filter" type="range">
+            <ul class="photo-editor__tuning-list">
+              <li class="photo-editor__tuning-list-item--activ">
+                <input class="photo-editor__tuning-list-item__crop-filter" id="crop-filter" name="crop-filter" type="range">
               </li>
-              <li class="photo-editor__photo-tuning-list-item">
-                <input class="photo-editor__photo-tuning-list-item__fill-filter" id="fill-filter" name="fill-filter" type="range">
+              <li class="photo-editor__tuning-list-item">
+                <input class="photo-editor__tuning-list-item__fill-filter" id="fill-filter" name="fill-filter" type="range">
               </li>
-              <li class="photo-editor__photo-tuning-list-item">
-                <input class="photo-editor__photo-tuning-list-item__contrast-filter" id="contrast-filter" name="contrast-filter" type="range">
+              <li class="photo-editor__tuning-list-item">
+                <input class="photo-editor__tuning-list-item__contrast-filter" id="contrast-filter" name="contrast-filter" type="range">
               </li>
             </ul>
 
