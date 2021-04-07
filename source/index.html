@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page__body">
@@ -65,28 +66,29 @@
 
           <h2 class="visually-hidden">Ссылки для загрузки приложения Пинк</h2>
 
-          <p class="download-links__slogan">Взгляните<br> на жизнь<br> иначе!</p>
-          <a class="download-links__button" href="https://apple.com/ru/app-store/">Скачать приложение</a>
-          <ul class="downloads-links__available-stores-list">
-            <li>
-              <a class="downloads-links__available-stores-item" href="https://apple.com/ru/app-store/">
-                <img src="img/apple-logo.svg" width="47" height="56" alt="Ссылка на магазин App Store">
-              </a>
-            </li>
-            <li>
-              <a class="downloads-links__available-stores-item" href="https://play.google.com/store/apps?hl=ru&gl=US">
-                <img src="img/android-logo.svg" width="43" height="47" alt="Ссылка на магазин Google Play">
-              </a>
-            </li>
-            <li>
-              <a class="downloads-links__available-stores-item" href="https://www.microsoft.com/ru-RU/store/apps">
-                <img src="img/microsoft-logo.svg" width="44" height="41" alt="Ссылка на магазин Microsoft Store">
-              </a>
-            </li>
-          </ul>
-          <p class="downloads-links__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
-          <p class="download-links__slogan">Устали от серости<br> мегаполиса?</p>
-          <p class="download-links__slogan">Нам есть, что вам<br> предложить!</p>
+          <p class="download-links__slogan">Взгляните на жизнь<br> иначе!</p>
+
+          <div class="download-links__links-wrapper">
+            <a class="download-links__button" href="https://apple.com/ru/app-store/">Скачать приложение</a>
+            <ul class="download-links__available-stores-list">
+              <li>
+                <a class="download-links__available-stores-item" href="https://apple.com/ru/app-store/">
+                  <img src="img/apple-logo.svg" width="47" height="56" alt="Ссылка на магазин App Store">
+                </a>
+              </li>
+              <li>
+                <a class="download-links__available-stores-item" href="https://play.google.com/store/apps?hl=ru&gl=US">
+                  <img src="img/android-logo.svg" width="43" height="47" alt="Ссылка на магазин Google Play">
+                </a>
+              </li>
+              <li>
+                <a class="downloads-link__available-stores-item" href="https://www.microsoft.com/ru-RU/store/apps">
+                  <img src="img/microsoft-logo.svg" width="44" height="41" alt="Ссылка на магазин Microsoft Store">
+                </a>
+              </li>
+            </ul>
+            <p class="download-links__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+          </div>
 
         </div>
       </section>
@@ -96,24 +98,29 @@
 
           <h2 class="visually-hidden">Преимущества приложения Пинк</h2>
 
+          <div class="advantages__slogan-wrapper">
+            <p class="advantages__slogan">Устали от серости мегаполиса?</p>
+            <p class="advantages__slogan">Нам есть, что вам<br> предложить!</p>
+          </div>
+
           <ul class="advantages__list">
             <li class="advantages__list-item advantages__list-item--fun">
-              <h3 class="advantages__title">Поднимает настроение</h3>
+              <h4 class="advantages__title">Поднимает настроение</h4>
               <p class="advantagees__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="advantages__list-item advantages__list-item--change">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <h4 class="advantages__title">Меняет мир вокруг</h4>
               <p class="advantagees__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="advantages__list-item advantages__list-item--friends">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <h4 class="advantages__title">Заводит новых друзей</h4>
               <p class="advantagees__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
 
           <div class="advantages__effect">
-            <h3 class="advantages__title effect-title">Эффект на 24 часа!</h3>
-            <p class="advantagees__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <h3 class="advantages__title-effect">Эффект на 24 часа!</h3>
+            <p class="advantages__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a class="advantages__effect-link" href="#">Узнать больше об исследовании</a>
           </div>
 
@@ -134,14 +141,14 @@
                 <p class="reviews__author-info">25 лет, водитель трамвая</p>
               </div>
             </blockquote>
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
+            <button class="rewievs__button reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="rewievs__button reviews__next" type="button">Следующий отзыв</button>
           </div>
 
-          <p class="rewievs__toggles slider-toggles">
-            <button class="slider-toggles__toggle slider-toggles__toggle--current" type="button" aria-label="первый слайд">1</button>
-            <button class="slider-toggles__toggle" type="button" aria-label="второй слайд">2</button>
-            <button class="slider-toggles__toggle" type="button" aria-label="третий слайд">3</button>
+          <p class="rewievs__toggles-list slider-toggles">
+            <button class="rewievs__toggles-list-item slider-toggles__toggle slider-toggles__toggle--current" type="button" aria-label="первый слайд">1</button>
+            <button class="rewievs__toggles-list-item slider-toggles__toggle" type="button" aria-label="второй слайд">2</button>
+            <button class="rewievs__toggles-list-item slider-toggles__toggle" type="button" aria-label="третий слайд">3</button>
           </p>
 
         </div>
@@ -155,10 +162,10 @@
           <table class="price-map__tarrifs slider">
             <caption class="visually-hidden">Прайс-лист</caption>
             <tr class="price-map__tariffs-list slider__list">
-              <td class="price-map__tariffs-item disabled-cell"></td>
-              <th class="price-map__tariffs-item slider__item" scope="col">База<br><span>1,99 USD</span></th>
-              <th class="price-map__tariffs-item slider__item slider__item--current tariff-hit" scope="col">Стандарт<br><span>3,99 USD</span></th>
-              <th class="price-map__tariffs-item slider__item" scope="col">Анлим<br><span>9,99 USD</span></th>
+              <td class="price-map__tariffs-item--disabled-cell"></td>
+              <th class="price-map__tariffs-item slider__item" scope="col">База<br><span class="price-map__tariffs-item__price">1,99 USD</span></th>
+              <th class="price-map__tariffs-item slider__item slider__item--current tariff-hit" scope="col">Стандарт<br><span class="price-map__tariffs-item__price">3,99 USD</span></th>
+              <th class="price-map__tariffs-item slider__item" scope="col">Анлим<br><span class="price-map__tariffs-item__price">9,99 USD</span></th>
             </tr>
             <tr class="price-map__option-item">
               <th class="price-map__option-name" scope="row">Розовый фильтр</th>
@@ -249,7 +256,7 @@
         </div>
 
         <div class="page-footer__social social">
-          <ul class="social__list">
+          <ul class="page-footer__social-list social__list">
             <li class="social__list-item">
               <a class="social__link social-link--twitter" href="https://twitter.com/htmlacademy_ru">
                 <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Приложение Пинк в Twitter">
