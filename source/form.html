@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+
+  <body class="page__body">
     <header class="page-header">
 
       <a class="page-header__logo" href="index.html">
@@ -61,7 +63,8 @@
 
       <section class="competition">
         <div class="competition__wrapper">
-            <h2 class="competiton__title-text">Конкурс на самое безбашенное путешествие с Пинк</h2>
+
+          <h2 class="competiton__title-text">Конкурс на самое безбашенное путешествие с Пинк</h2>
 
           <div class="competiton__description">
             <p class="competiton__description-slogan">Поделитесь своей историей и получите шанс выиграть ценный приз – 1000 миль на вашу бонусную карту!</p>
@@ -92,7 +95,7 @@
               <ul class="fields-list fields-list--achievements">
                 <li class="field">
                   <input class="field__input field__input--achievements" id="shark" name="shark" type="checkbox" checked>
-                  <label for="shark">Сделал селфи с акулой</label>
+                  <label class="field__label field__label--achievements" for="shark">Сделал селфи с акулой</label>
                 </li>
                 <li>
                   <input class="field__input field__input--achievements" id="sunburn" name="sunburn" type="checkbox" checked>
@@ -150,7 +153,7 @@
 
             <fieldset class="form__element">
               <label class="field__label" for="comment-area">Опишите свои эмоции</label>
-              <textarea class="field__input field__input--textarea" id="comment-area" name="comment-area" rows="6" cols="30" placeholder="Можно прямо в красках, не стесняясь в выражениях"></textarea>
+              <textarea class="field__input field__input--textarea" id="comment-area" name="comment-area" rows="6" cols="25" placeholder="Можно прямо в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
 
             <button class="button form__submit" type="submit" aria-label="Отправить заявку на участие в конкурсе">Отправить форму</button>
