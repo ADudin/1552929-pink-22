@@ -14,6 +14,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
+  empty-cells: hide;
 }
 
 .price-map__tariffs-item {
@@ -21,10 +22,6 @@
   font-weight: @bold;
   color: @white;
   background-color: @black-blue;
-}
-
-.price-map__tariffs-item--disabled-cell {
-  opacity: 0;
 }
 
 .price-map__tariffs-item__price {
@@ -39,4 +36,20 @@
   font-weight: @normal;
   color: @black-blue;
   background-color: @white;
+}
+
+.price-map__option-name {
+  text-align: left;
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+  }
+}
+
+.price-map__tariffs-item--hidden,
+.price-map__option-availability-true--hidden,
+.price-map__option-availability-false--hidden {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+  }
 }
