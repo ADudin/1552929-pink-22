@@ -1,10 +1,17 @@
 .reviews {
   line-height: 30px;
   text-align: center;
-}
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
 
-.reviews__wrapper {
-  padding: 0 20px 0 20px;
+  @media (min-width: @tablet-width) {
+    max-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 940px;
+  }
 }
 
 .reviews__item {
@@ -15,6 +22,19 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+
+.reviews__quotes {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 79px;
+    height: 63px;
+    background-image: url("../../img/quotes.svg");
+    background-repeat: no-repeat;
+    margin: 0 auto;
   }
 }
 
@@ -69,6 +89,20 @@
   @media (min-width: @desktop-width) {
     display: inline-block;
   }
+}
+
+.reviews__prev,
+.reviews__next {
+  position: absolute;
+  top: 213px;
+}
+
+.reviews__prev {
+  left: 0;
+}
+
+.reviews__next {
+  right: 0;
 }
 
 .rewievs__toggles-list-item {
