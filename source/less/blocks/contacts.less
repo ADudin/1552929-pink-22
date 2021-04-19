@@ -3,14 +3,15 @@
   font-weight: @light;
   color: @black-blue;
   text-align: center;
-}
-
-.contacts__wrapper {
-  padding: 0 20px 0 20px;
   margin: 0 auto;
+  max-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 620px;
+  }
 
   @media (min-width: @desktop-width) {
-    padding: 0 130px 0 130px;
+    max-width: 940px;
   }
 }
 
