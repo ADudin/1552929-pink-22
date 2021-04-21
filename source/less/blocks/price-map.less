@@ -6,24 +6,30 @@
 
 .price-map {
   margin: 0 auto;
-  padding: 0 20px 0 20px;
-  overflow: hidden;
 
   @media (min-width: @desktop-width) {
     padding: 0 130px 0 130px;
   }
 }
 
+.price-map__tarrifs-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: initial;
+  }
+}
+
 .price-map__tarrifs {
   line-height: 30px;
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
   empty-cells: hide;
-  max-width: 280px;
+  max-width: 320px;
 
   @media (min-width: @tablet-width) {
-    max-width: 620px;
+    width: 620px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,11 +42,12 @@
   font-weight: @bold;
   color: @white;
   background-color: @black-blue;
-  width: 276px;
 }
 
 .price-map__tariffs-item,
 .price-map__tariffs-item--disabled-cell {
+  width: 276px;
+
   @media (min-width: @tablet-width) {
     width: 153px;
   }
@@ -50,18 +57,18 @@
   }
 }
 
-.price-map__option-availability-true,
-.price-map__option-availability-false {
+.price-map__option-availability-container-true,
+.price-map__option-availability-container-false {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    display: table-cell;
+    justify-content: center;
   }
 }
 
-.price-map__option-availability-true {
+.price-map__option-availability-container-true {
   padding: 0 17px 0 20px;
 
   @media (min-width: @tablet-width) {
@@ -69,7 +76,7 @@
   }
 }
 
-.price-map__option-availability-false {
+.price-map__option-availability-container-false {
   padding: 0 19px 0 20px;
 
   @media (min-width: @tablet-width) {
@@ -96,7 +103,8 @@
   background-color: @white;
 }
 
-.price-map__option-name {
+.price-map__option-name,
+.price-map__tariffs-item--disabled-cell {
   display: none;
   text-align: left;
 
@@ -104,6 +112,7 @@
     display: table-cell;
     text-transform: none;
     padding-left: 15px;
+    width: 21vh;
   }
 
   @media (min-width: @desktop-width) {
@@ -114,17 +123,6 @@
 .price-map__option-availability-name {
   @media (min-width: @tablet-width) {
     display: none;
-  }
-}
-
-.price-map__tariffs-item--hidden,
-.price-map__option-availability-true--hidden,
-.price-map__option-availability-false--hidden,
-.price-map__tariffs-item--disabled-cell {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: table-cell;
   }
 }
 
