@@ -2,18 +2,31 @@
 .price-map__tariffs-item--disabled-cell {
   text-align: center;
   background-color: @light-gray;
+  overflow: hidden;
 }
 
-.price-map__wrapper {
-  padding: 0 20px 0 20px;
+.price-map__tarrifs-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .price-map__tarrifs {
-  width: 100%;
   line-height: 30px;
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
+  empty-cells: hide;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
 
 .price-map__tariffs-item {
@@ -23,8 +36,52 @@
   background-color: @black-blue;
 }
 
-.price-map__tariffs-item--disabled-cell {
-  opacity: 0;
+.price-map__option-availability-container-true,
+.price-map__option-availability-container-false {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 237px;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+  }
+}
+
+.price-map__tariffs-item,
+.price-map__tariffs-item--disabled-cell,
+.price-map__option-name,
+.price-map__option-availability-container-true,
+.price-map__option-availability-container-false {
+  @media (min-width: @tablet-width) {
+    width: 151px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 231px;
+  }
+}
+
+.price-map__option-availability-container-true {
+  padding: 0 17px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.price-map__option-availability-container-false {
+  padding: 0 19px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.price-map__option-availability-true-image,
+.price-map__option-availability-false-image {
+  vertical-align: middle;
 }
 
 .price-map__tariffs-item__price {
@@ -39,4 +96,32 @@
   font-weight: @normal;
   color: @black-blue;
   background-color: @white;
+}
+
+.price-map__option-name,
+.price-map__tariffs-item--disabled-cell {
+  display: none;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+    text-transform: none;
+    padding-left: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 22px;
+  }
+}
+
+.price-map__option-availability-name {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.price-map__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
