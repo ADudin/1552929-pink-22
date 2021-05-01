@@ -61,14 +61,20 @@
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Пинк. Конкурс.</h1>
 
+      <div class="title">
+
+        <h2 class="title__text">Конкурс на самое безбашенное путешествие с Пинк</h2>
+
+      </div>
+
       <section class="competition">
         <div class="competition__wrapper">
 
-          <h2 class="competiton__title-text">Конкурс на самое безбашенное путешествие с Пинк</h2>
-
           <div class="competiton__description">
-            <p class="competiton__description-slogan">Поделитесь своей историей и получите шанс выиграть ценный приз – 1000 миль на вашу бонусную карту!</p>
-            <p class="competiton__description-text">Пожалуйста, заполните форму ниже:</p>
+            <p class="competiton__description-slogan">
+              Поделитесь своей историей и получите шанс выиграть ценный приз – 1000 миль на вашу бонусную карту!
+              <span class="competiton__description-text">Пожалуйста, заполните форму ниже:</span>
+            </p>
           </div>
 
           <form class="form" action="https://echo.htmlacademy.ru" method="POST">
@@ -94,66 +100,71 @@
               <legend class="form__description">Ваши безбашенные достижения в путешествии</legend>
               <ul class="fields-list fields-list--achievements">
                 <li class="field">
-                  <input class="field__input field__input--achievements" id="shark" name="shark" type="checkbox" checked>
+                  <input class="field__input--achievements" id="shark" name="shark" type="checkbox" checked>
                   <label class="field__label field__label--achievements" for="shark">Сделал селфи с акулой</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--achievements" id="sunburn" name="sunburn" type="checkbox" checked>
+                <li class="field">
+                  <input class="field__input--achievements" id="sunburn" name="sunburn" type="checkbox" checked>
                   <label class="field__label field__label--achievements" for="sunburn">Обгорел на пляже</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--achievements" id="norris" name="norris" type="checkbox">
+                <li class="field">
+                  <input class="field__input--achievements" id="norris" name="norris" type="checkbox">
                   <label class="field__label field__label--achievements" for="norris">Видел Чака Норриса</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--achievements" id="souvenirs" name="souvenirs" type="checkbox">
+                <li class="field">
+                  <input class="field__input--achievements" id="souvenirs" name="souvenirs" type="checkbox">
                   <label class="field__label field__label--achievements" for="souvenirs">Накупил сувениров</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--achievements" id="tower" name="tower" type="checkbox" checked>
+                <li class="field">
+                  <input class="field__input--achievements" id="tower" name="tower" type="checkbox" checked>
                   <label class="field__label field__label--achievements" for="tower">Удержал башню</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--achievements" id="hotel" name="hotel" type="checkbox">
+                <li class="field">
+                  <input class="field__input--achievements" id="hotel" name="hotel" type="checkbox">
                   <label class="field__label field__label--achievements" for="hotel">Разгромил отель</label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="form__element">
-              <ul class="fields-list">
-                <li class="field">
-                  <label class="field__label" for="phone">Номер телефона</label>
-                  <input class="field__input" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
-                </li>
-                <li class="field">
-                  <label class="field__label" for="email">Адрес почты</label>
-                  <input class="field__input" id="email" name="email" type="email" placeholder="Введите почту *" required>
-                </li>
-              </ul>
+              <div class="form__element__container">
+                <ul class="fields-list">
+                  <li class="field">
+                    <label class="field__label" for="phone">Номер телефона</label>
+                    <input class="field__input" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
+                  </li>
+                  <li class="field">
+                    <label class="field__label" for="email">Адрес почты</label>
+                    <input class="field__input" id="email" name="email" type="email" placeholder="Введите почту *" required>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
 
             <fieldset class="form__element form__element--app-platforms">
               <legend class="form__description">С каким приложением путешествовали?</legend>
               <ul class="fields-list fields-list--app-platforms">
-                <li>
-                  <input class="field__input field__input--app-platforms" id="iOS" name="app-platform" type="radio" value="iOS" checked>
+                <li class="field">
+                  <input class="field__input--app-platforms" id="iOS" name="app-platform" type="radio" value="iOS" checked>
                   <label class="field__label field__label--app-platforms" for="iOS">Pink для iOS</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--app-platforms" id="android" name="app-platform" type="radio" value="android">
+                <li class="field">
+                  <input class="field__input--app-platforms" id="android" name="app-platform" type="radio" value="android">
                   <label class="field__label field__label--app-platforms" for="android">Pink на Android</label>
                 </li>
-                <li>
-                  <input class="field__input field__input--app-platforms" id="windows-phone" name="app-platform" type="radio" value="windows-phone">
+                <li class="field">
+                  <input class="field__input--app-platforms" id="windows-phone" name="app-platform" type="radio" value="windows-phone">
                   <label class="field__label field__label--app-platforms" for="windows-phone">Windows Phone</label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="form__element">
-              <label class="field__label" for="comment-area">Опишите свои эмоции</label>
-              <textarea class="field__input field__input--textarea" id="comment-area" name="comment-area" rows="6" cols="25" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <div class="comment-field">
+                <label class="field__label" for="comment-area">Опишите свои эмоции</label>
+                <textarea class="field__input field__input--textarea" id="comment-area" name="comment-area" rows="6" cols="25"
+                  placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div>
             </fieldset>
 
             <button class="button form__submit" type="submit" aria-label="Отправить заявку на участие в конкурсе">Отправить форму</button>
