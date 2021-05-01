@@ -1,10 +1,14 @@
+.form {
+  text-align: center;
+}
+
 .form__element {
   border: none;
   margin: 0 auto;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    max-width: 616px;
+    max-width: 620px;
   }
 }
 
@@ -17,10 +21,32 @@
 
 .form__element--achievements,
 .form__element--app-platforms {
+  text-align: left;
   background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
     background: none;
+  }
+}
+
+.form__element:first-child .field {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 20px;
+}
+
+.form__element:nth-child(3) .form__description {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.form__element:nth-child(3) .field__input {
+  @media (min-width: @tablet-width) {
+    margin: 0 60px;
+    width: 496px;
   }
 }
 
