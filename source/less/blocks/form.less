@@ -30,9 +30,11 @@
 }
 
 .form__element:first-child .field {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-column-gap: 20px;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 20px;
+  }
 }
 
 .form__element:nth-child(3) .form__description {
