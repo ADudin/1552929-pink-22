@@ -1,3 +1,18 @@
+.popup {
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 7px 15px 0 @shadow;
+  border-radius: 5px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 780px;
+  }
+}
+
 .popup__wrapper {
   text-align: center;
 }
@@ -9,6 +24,24 @@
   color: @black;
   align-items: center;
   padding: 0 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 65px;
+  }
+}
+
+.popup__title br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: initial;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .popup__message {
@@ -16,6 +49,22 @@
   line-height: 24px;
   color: @black-blue;
   padding: 0 20px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 200px;
+  }
+}
+
+.popup__message br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .popup__button {
@@ -26,6 +75,12 @@
   background-color: @green;
   border: 2px solid @green;
   border-radius: 1px;
+  width: 276px;
+  height: 59px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
 }
 
 .popup__button-success-wrapper {

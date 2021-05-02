@@ -134,10 +134,16 @@
 }
 
 .form__submit__container {
+  text-align: center;
+
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
@@ -158,6 +164,12 @@
   border-radius: 1px;
   color: @white;
   background-color: @green;
+  width: 276px;
+  height: 59px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
 }
 
 .form__reminding-footnote {
@@ -167,6 +179,15 @@
   color: @black-blue;
 }
 
-.form__reminding-footnote span {
+.form__reminding-footnote__symbol {
   color: @pink;
+}
+
+.form__reminding-footnote--specified {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    color: @black-blue;
+    display: inline-block;
+  }
 }
