@@ -1,5 +1,5 @@
 .form {
-  text-align: center;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -10,22 +10,30 @@
       "achievements"
       "comment"
       "submit";
+    max-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 74px;
+    grid-template-areas:
+      "name app-platforms"
+      "contacts contacts"
+      "achievements achievements"
+      "comment comment"
+      "submit submit";
+    max-width: 940px;
   }
 }
 
 .form__element {
   border: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-
-  @media (min-width: @tablet-width) {
-    max-width: 620px;
-  }
 }
 
 .form__element:first-child {
   @media (min-width: @tablet-width) {
-    width: 616px;
     grid-area: name;
   }
 }
@@ -45,6 +53,10 @@
 .form__element:nth-child(4) {
   @media (min-width: @tablet-width) {
     grid-area: app-platforms;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 431px;
   }
 }
 
@@ -73,7 +85,6 @@
 
   @media (min-width: @tablet-width) {
     background: none;
-    width: 616px;
   }
 }
 
@@ -87,6 +98,10 @@
 
 .form__element:first-child .field__label {
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .form__element:nth-child(3) .field {
@@ -107,18 +122,19 @@
 .form__element:nth-child(3) .field__input {
   @media (min-width: @tablet-width) {
     margin: 0 60px;
-    width: 496px;
   }
 }
 
 .form__element:nth-child(3) .field__label {
   text-align: left;
-  padding-left: 77px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 77px;
+  }
 }
 
 .form__submit__container {
   @media (min-width: @tablet-width) {
-    width: 620px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
