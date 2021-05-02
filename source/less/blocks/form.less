@@ -1,5 +1,16 @@
 .form {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "app-platforms"
+      "contacts"
+      "achievements"
+      "comment"
+      "submit";
+  }
 }
 
 .form__element {
@@ -12,6 +23,43 @@
   }
 }
 
+.form__element:first-child {
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    grid-area: name;
+  }
+}
+
+.form__element:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    grid-area: achievements;
+  }
+}
+
+.form__element:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    grid-area: contacts;
+  }
+}
+
+.form__element:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    grid-area: app-platforms;
+  }
+}
+
+.form__element:nth-child(5) {
+  @media (min-width: @tablet-width) {
+    grid-area: comment;
+  }
+}
+
+.form__element:nth-child(6) {
+  @media (min-width: @tablet-width) {
+    grid-area: submit;
+  }
+}
+
 .form__element:not(:first-child) {
   @media (min-width: @tablet-width) {
     border: 2px solid @extra-light-gray;
@@ -21,11 +69,11 @@
 
 .form__element--achievements,
 .form__element--app-platforms {
-  text-align: left;
   background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
     background: none;
+    width: 616px;
   }
 }
 
@@ -35,6 +83,10 @@
     grid-template-columns: min-content 1fr;
     grid-column-gap: 20px;
   }
+}
+
+.form__element:first-child .field__label {
+  align-self: center;
 }
 
 .form__element:nth-child(3) .form__description {
@@ -54,7 +106,7 @@
 
 .form__submit__container {
   @media (min-width: @tablet-width) {
-    max-width: 620px;
+    width: 620px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
