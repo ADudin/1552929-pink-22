@@ -24,16 +24,20 @@
 }
 
 .photo-gallery__list {
-  padding: 0 20px;
+  padding: 0;
+  display: grid;
+  grid-row-gap: 20px;
 }
 
-.photo-gallery__list-item {
+.photo-gallery__list-item:first-child .photo-gallery__list-item__description-container {
   background-color: @light-gray;
+  margin: 0 20px;
 }
 
 .photo-gallery__list-item:not(:first-child) {
+  background-color: @light-gray;
   max-width: 280px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .photo-gallery__list-item--day-photo {
@@ -54,7 +58,7 @@
   width: 140px;
   text-align: center;
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 0;
 }
 
