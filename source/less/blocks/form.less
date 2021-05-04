@@ -1,11 +1,150 @@
+.form {
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "app-platforms"
+      "contacts"
+      "achievements"
+      "comment"
+      "submit";
+    max-width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 74px;
+    grid-template-areas:
+      "name app-platforms"
+      "contacts contacts"
+      "achievements achievements"
+      "comment comment"
+      "submit submit";
+    max-width: 940px;
+  }
+}
+
 .form__element {
   border: none;
-  padding: 0 20px 0 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.form__element:first-child {
+  @media (min-width: @tablet-width) {
+    grid-area: name;
+  }
+}
+
+.form__element:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    grid-area: achievements;
+  }
+}
+
+.form__element:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    grid-area: contacts;
+  }
+}
+
+.form__element:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    grid-area: app-platforms;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 431px;
+  }
+}
+
+.form__element:nth-child(5) {
+  @media (min-width: @tablet-width) {
+    grid-area: comment;
+  }
+}
+
+.form__element:nth-child(6) {
+  @media (min-width: @tablet-width) {
+    grid-area: submit;
+  }
+}
+
+.form__element:not(:first-child) {
+  @media (min-width: @tablet-width) {
+    border: 2px solid @extra-light-gray;
+    border-radius: 1px;
+  }
 }
 
 .form__element--achievements,
 .form__element--app-platforms {
   background-color: @light-gray;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
+.form__element:first-child .field {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+.form__element:first-child .field__label {
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.form__element:nth-child(3) .field {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.form__element:nth-child(3) .form__description {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.form__element:nth-child(3) .field__input {
+  @media (min-width: @tablet-width) {
+    margin: 0 60px;
+  }
+}
+
+.form__element:nth-child(3) .field__label {
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 77px;
+  }
+}
+
+.form__submit__container {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .form__description {
@@ -25,6 +164,12 @@
   border-radius: 1px;
   color: @white;
   background-color: @green;
+  width: 276px;
+  height: 59px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
 }
 
 .form__reminding-footnote {
@@ -34,6 +179,15 @@
   color: @black-blue;
 }
 
-.form__reminding-footnote span {
+.form__reminding-footnote__symbol {
   color: @pink;
+}
+
+.form__reminding-footnote--specified {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    color: @black-blue;
+    display: inline-block;
+  }
 }
