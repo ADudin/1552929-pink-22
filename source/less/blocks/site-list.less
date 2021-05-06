@@ -6,12 +6,22 @@
 .site-list__item {
   color: @white;
   background-color: @black-blue;
-  padding: 0 20px 0 20px;
 
   @media (min-width: @desktop-width) {
     font-weight: @normal;
     text-transform: initial;
     background: none;
     padding: 0;
+  }
+}
+
+.site-list__item a {
+  display: block;
+  padding: 15px 0;
+  border-top: 1px solid fade(@white, 15%);
+  border-bottom: 1px solid @black;
+
+  @media (min-width: @desktop-width) {
+    border: none;
   }
 }
