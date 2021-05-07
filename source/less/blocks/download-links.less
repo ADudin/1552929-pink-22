@@ -6,16 +6,21 @@
   background-position: center top;
   background-size: 100% auto;
   display: grid;
+  margin-top: -66px;
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/back-tablet.jpg");
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "slogan ." "links-wrapper .";
+    margin-top: -110px;
+    padding-top: 110px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: center top;
+    background-image: url("../img/back-desktop.jpg");
     grid-template-areas: ". slogan image ." ". links-wrapper image .";
     grid-template-columns: calc((100% - 940px) / 2) 1fr 2fr calc((100% - 940px) / 2);
+    grid-template-rows: min-content 1fr;
   }
 }
 
@@ -25,22 +30,46 @@
   margin: 0 auto;
   text-align: center;
   z-index: 2;
+  padding: 86px 0 32px 0;
 
   @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
     grid-area: slogan;
     align-self: end;
+    padding: 15px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+    align-self: start;
+    padding-top: 100px;
+  }
+}
+
+.download-links__slogan br:first-child {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
   }
 }
 
 .download-links__links-wrapper {
   background-color: @dark-blue;
-  padding: 28px 20px 0 20px;
+  padding: 28px 20px 38px 20px;
   text-align: center;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
     background: none;
     grid-area: links-wrapper;
+    padding-top: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 35px 0 0 0;
   }
 }
 
@@ -70,7 +99,8 @@
     background-image: url("../img/downloads-desktop.png");
     grid-area: image;
     align-self: end;
-    margin-left: -320px;
+    margin-left: -280px;
+    padding-top: 94px;
   }
 }
 
@@ -78,9 +108,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 38px;
+  padding: 32px 38px 0 38px;
   width: 204px;
   margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    padding: 67px 0 0 0;
+  }
 }
 
 .download-links__button {
@@ -105,9 +139,14 @@
   line-height: 24px;
   width: 280px;
   margin: 0 auto;
+  padding-top: 28px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
   }
 }
