@@ -4,6 +4,10 @@
   color: @black-blue;
   text-align: center;
   margin: 0 auto;
+}
+
+.contacts__container {
+  margin: 0 auto;
   max-width: 280px;
 
   @media (min-width: @tablet-width) {
@@ -66,4 +70,54 @@
 
 .contacts__address {
   font-style: normal;
+}
+
+.contacts__map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 320px 200px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+    background-image: url("../img/map-tablet.jpg");
+    background-size: 660px 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+    background-image: url("../img/map-desktop.jpg");
+    background-size: 1200px 502px;
+  }
+
+  & iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contacts__map::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 33px;
+  background-image: url("../img/triangle-white-mobile&tablet.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 100%;
+
+
+  @media (min-width: @tablet-width) {
+    height: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/triangle-white-desktop.svg");
+    height: 103px;
+  }
 }
