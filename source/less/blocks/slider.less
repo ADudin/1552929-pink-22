@@ -1,0 +1,40 @@
+.slider-toggles {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.slider-toggles__toggle:not(:last-child) {
+  margin-right: 19px;
+}
+
+.slider-toggles__toggle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background-color: fade(@black-blue, 30%);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    background-color: fade(@black-blue, 60%);
+  }
+
+  &:active {
+    background-color: fade(@black-blue, 10%);
+  }
+
+  &--current::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid @black-blue;
+    background-color: @white;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -3,42 +3,113 @@
   line-height: 18px;
   font-weight: @normal;
   color: @black-blue;
-  text-align: center;
+  text-align: top;
   margin: 0 auto;
   max-width: 280px;
+  padding: 40px 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     max-width: 620px;
+    padding: 33px 0;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 940px;
+    padding: 68px 0;
   }
 }
 
-.page-footer__social-list {
-  padding: 0;
-  width: 172px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.page-footer__logo {
+  width: 145px;
+  height: 40px;
   margin: 0 auto;
-}
-
-.page-footer__copyright {
-  min-width: 130px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   @media (min-width: @tablet-width) {
     margin: 0;
   }
 
+  &__img-mobile-and-tablet {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &__img-desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active path:not(:last-child) {
+    fill: fade(@black-blue, 30%);
+  }
+
+  &:active path:not(:nth-child(5)),
+  &:active path:not(:nth-child(6)),
+  &:active path:not(:nth-child(7)) {
+    @media (min-width: @desktop-width) {
+      fill: fade(@black-blue, 30%);
+    }
+  }
+
+  &:active path:nth-child(5),
+  &:active path:nth-child(6),
+  &:active path:nth-child(7) {
+    @media (min-width: @desktop-width) {
+      fill: fade(@pink, 30%);
+    }
+  }
+}
+
+.page-footer__social-list {
+  width: 172px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 41px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     min-width: 153px;
+  }
+
+  &__link {
+    margin-left: 15px;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 13px;
+    }
+  }
+
+  &:hover path {
+    fill: @black-blue;
+  }
+
+  &:active path {
+    opacity: 0.3;
   }
 }
