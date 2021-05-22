@@ -22,7 +22,23 @@
   }
 }
 
+.field-list--user-info .field:first-child {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.comment-field {
+  margin: 44px auto 0;
+}
+
 .fields-list--achievements {
+  margin-top: 115px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -36,5 +52,35 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 74px;
+  }
+
+  & .field__label {
+    @media (min-width: @tablet-width) {
+      margin-top: 12px;
+    }
+  }
+}
+
+.fields-list--app-platforms {
+  margin-top: 111px;
+
+  @media (min-width: @tablet-width) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  & .field:first-child {
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
+  }
+
+  & .field:not(:first-child) {
+    @media (min-width: @tablet-width) {
+      margin-top: 39px;
+    }
   }
 }
