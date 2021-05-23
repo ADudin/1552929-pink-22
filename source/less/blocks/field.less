@@ -8,15 +8,20 @@
   text-transform: uppercase;
   color: @pink;
   padding-left: 23px;
-}
 
-.field__label--achievements,
-.field__label--app-platforms {
-  font-size: 18px;
-  text-transform: initial;
-  color: @black-blue;
-  padding: 0;
-  margin: 0;
+  &--achievements,
+  &--app-platforms {
+    font-size: 18px;
+    text-transform: initial;
+    color: @black-blue;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--achievements {
+    padding-left: 61px;
+    cursor: pointer;
+  }
 }
 
 .field__input {
@@ -33,24 +38,62 @@
   @media (min-width: @tablet-width) {
     width: initial;
   }
-}
 
-.field__input--textarea {
-  height: 197px;
+  &--textarea {
+    height: 197px;
 
-  @media (min-width: @tablet-width) {
-    margin: 0 60px;
-    width: 496px;
-    height: 189px;
+    @media (min-width: @tablet-width) {
+      margin: 0 60px;
+      width: 496px;
+      height: 189px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 816px;
+      height: 124px;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    width: 816px;
-    height: 124px;
+  &::placeholder {
+    color: @black-blue;
+    padding-left: 20px;
   }
-}
 
-.field__input::placeholder {
-  color: @black-blue;
-  padding-left: 20px;
+  /* checkboxes */
+
+  &--checkbox {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    margin: -4px 0 0 -61px;
+    background-image: url("../img/checkbox.svg");
+  }
+
+  &--achievements:focus + .field__input--checkbox {
+    background-image: url("../img/checkbox--hover.svg");
+  }
+
+  &--achievements:hover + .field__input--checkbox {
+    background-image: url("../img/checkbox--hover.svg");
+  }
+
+  &--achievements:active + .field__input--checkbox {
+    background-image: url("../img/checkbox--down.svg");
+  }
+
+  &--achievements:checked + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked.svg");
+  }
+
+  &--achievements:checked:focus + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked--hover.svg");
+  }
+
+  &--achievements:checked:hover + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked--hover.svg");
+  }
+
+  &--achievements:checked:active + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked--down.svg");
+  }
 }
