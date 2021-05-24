@@ -14,13 +14,13 @@
     font-size: 18px;
     text-transform: initial;
     color: @black-blue;
+    cursor: pointer;
     padding: 0;
     margin: 0;
   }
 
   &--achievements {
     padding-left: 61px;
-    cursor: pointer;
   }
 }
 
@@ -59,20 +59,21 @@
     padding-left: 20px;
   }
 
-  /* checkboxes */
+  /* checkboxes & radio buttons */
+
+  &--checkbox,
+  &--radio {
+    position: absolute;
+  }
 
   &--checkbox {
-    position: absolute;
     width: 39px;
     height: 39px;
     margin: -4px 0 0 -61px;
     background-image: url("../img/checkbox.svg");
   }
 
-  &--achievements:focus + .field__input--checkbox {
-    background-image: url("../img/checkbox--hover.svg");
-  }
-
+  &--achievements:focus + .field__input--checkbox,
   &--achievements:hover + .field__input--checkbox {
     background-image: url("../img/checkbox--hover.svg");
   }
@@ -85,15 +86,41 @@
     background-image: url("../img/checkbox-checked.svg");
   }
 
-  &--achievements:checked:focus + .field__input--checkbox {
-    background-image: url("../img/checkbox-checked--hover.svg");
-  }
-
+  &--achievements:checked:focus + .field__input--checkbox,
   &--achievements:checked:hover + .field__input--checkbox {
     background-image: url("../img/checkbox-checked--hover.svg");
   }
 
   &--achievements:checked:active + .field__input--checkbox {
     background-image: url("../img/checkbox-checked--down.svg");
+  }
+
+  &--radio {
+    width: 41px;
+    height: 41px;
+    margin: -4px 0 0 -63px;
+    background-image: url("../img/radio.svg");
+  }
+
+  &--app-platforms:focus + .field__input--radio,
+  &--app-platforms:hover + .field__input--radio {
+    background-image: url("../img/radio--hover.svg");
+  }
+
+  &--app-platforms:active + .field__input--radio {
+    background-image: url("../img/radio--down.svg");
+  }
+
+  &--app-platforms:checked + .field__input--radio {
+    background-image: url("../img/radio-checked.svg");
+  }
+
+  &--app-platforms:checked:focus + .field__input--radio,
+  &--app-platforms:checked:hover + .field__input--radio {
+    background-image: url("../img/radio-checked--hover.svg");
+  }
+
+  &--app-platforms:checked:active + .field__input--radio {
+    background-image: url("../img/radio-checked--down.svg");
   }
 }

@@ -183,16 +183,25 @@
             <legend class="form__description">С каким приложением<br> путешествовали?</legend>
             <ul class="fields-list fields-list--app-platforms">
               <li class="field">
-                <input class="field__input--app-platforms" id="iOS" name="app-platform" type="radio" value="iOS" checked>
-                <label class="field__label field__label--app-platforms" for="iOS">Pink для iOS</label>
+                <label class="field__label field__label--app-platforms" for="iOS">
+                  <input class="field__input--app-platforms visually-hidden" id="iOS" name="app-platform" type="radio" value="iOS" checked>
+                  <span class="field__input--radio"></span>
+                  Pink для iOS
+                </label>
               </li>
               <li class="field">
-                <input class="field__input--app-platforms" id="android" name="app-platform" type="radio" value="android">
-                <label class="field__label field__label--app-platforms" for="android">Pink на Android</label>
+                <label class="field__label field__label--app-platforms" for="android">
+                  <input class="field__input--app-platforms visually-hidden" id="android" name="app-platform" type="radio" value="android">
+                  <span class="field__input--radio"></span>
+                  Pink на Android
+                </label>
               </li>
               <li class="field">
-                <input class="field__input--app-platforms" id="windows-phone" name="app-platform" type="radio" value="windows-phone">
-                <label class="field__label field__label--app-platforms" for="windows-phone">Windows Phone</label>
+                <label class="field__label field__label--app-platforms" for="windows-phone">
+                  <input class="field__input--app-platforms visually-hidden" id="windows-phone" name="app-platform" type="radio" value="windows-phone">
+                  <span class="field__input--radio"></span>
+                  Windows Phone
+                </label>
               </li>
             </ul>
           </fieldset>
