@@ -1,18 +1,65 @@
+.field {
+  margin-top: 29px;
+  position: relative;
+
+  /* phone & email images */
+
+  @media (min-width: @tablet-width) {
+    &--phone::before,
+    &--email::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 62px;
+      width: 59px;
+      height: 59px;
+      background-color: @extra-light-gray;
+    }
+
+    &--phone::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 80px;
+      width: 20px;
+      height: 19px;
+      background-image: url("../img/phone-icon.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--email::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 81px;
+      width: 18px;
+      height: 13px;
+      background-image: url("../img/mail-icon.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 .field__label {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: @pink;
   padding-left: 23px;
-}
 
-.field__label--achievements,
-.field__label--app-platforms {
-  font-size: 18px;
-  text-transform: initial;
-  color: @black-blue;
-  padding: 0;
-  margin: 0;
+  &--achievements,
+  &--app-platforms {
+    font-size: 18px;
+    text-transform: initial;
+    color: @black-blue;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--achievements {
+    padding-left: 61px;
+  }
 }
 
 .field__input {
@@ -22,30 +69,106 @@
   border: 2px solid @extra-light-gray;
   border-radius: 1px;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0 0;
   width: 100%;
   height: 59px;
 
   @media (min-width: @tablet-width) {
     width: initial;
   }
-}
 
-.field__input--textarea {
-  height: 197px;
+  &--textarea {
+    height: 197px;
 
-  @media (min-width: @tablet-width) {
-    margin: 0 60px;
-    width: 496px;
-    height: 189px;
+    @media (min-width: @tablet-width) {
+      margin: 0 60px;
+      width: 496px;
+      height: 189px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 816px;
+      height: 124px;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    width: 816px;
+  &::placeholder {
+    color: @black-blue;
+    padding-left: 20px;
   }
-}
 
-.field__input::placeholder {
-  color: @black-blue;
-  padding-left: 20px;
+  &:hover {
+    border-color: @black-blue;
+  }
+
+  &:focus,
+  &:active {
+    outline: solid 2px @pink;
+    outline-offset: -2px;
+  }
+
+  /* checkboxes & radio buttons */
+
+  &--checkbox,
+  &--radio {
+    position: absolute;
+  }
+
+  &--checkbox {
+    width: 39px;
+    height: 39px;
+    margin: -4px 0 0 -61px;
+    background-image: url("../img/checkbox.svg");
+  }
+
+  &--achievements:focus + .field__input--checkbox,
+  &--achievements:hover + .field__input--checkbox {
+    background-image: url("../img/checkbox--hover.svg");
+  }
+
+  &--achievements:active + .field__input--checkbox {
+    background-image: url("../img/checkbox--down.svg");
+  }
+
+  &--achievements:checked + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked.svg");
+  }
+
+  &--achievements:checked:focus + .field__input--checkbox,
+  &--achievements:checked:hover + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked--hover.svg");
+  }
+
+  &--achievements:checked:active + .field__input--checkbox {
+    background-image: url("../img/checkbox-checked--down.svg");
+  }
+
+  &--radio {
+    width: 41px;
+    height: 41px;
+    margin: -4px 0 0 -63px;
+    background-image: url("../img/radio.svg");
+  }
+
+  &--app-platforms:focus + .field__input--radio,
+  &--app-platforms:hover + .field__input--radio {
+    background-image: url("../img/radio--hover.svg");
+  }
+
+  &--app-platforms:active + .field__input--radio {
+    background-image: url("../img/radio--down.svg");
+  }
+
+  &--app-platforms:checked + .field__input--radio {
+    background-image: url("../img/radio-checked.svg");
+  }
+
+  &--app-platforms:checked:focus + .field__input--radio,
+  &--app-platforms:checked:hover + .field__input--radio {
+    background-image: url("../img/radio-checked--hover.svg");
+  }
+
+  &--app-platforms:checked:active + .field__input--radio {
+    background-image: url("../img/radio-checked--down.svg");
+  }
 }

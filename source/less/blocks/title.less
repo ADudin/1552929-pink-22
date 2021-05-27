@@ -1,8 +1,21 @@
 .title {
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-position: center top;
+  background-size: 100% auto;
+  margin-top: -66px;
+  padding: 94px 0 46px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/back-tablet.jpg");
+    margin-top: -110px;
+    padding: 175px 0 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+    padding: 168px 0 90px;
+  }
 }
 
 .title__text {

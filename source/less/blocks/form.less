@@ -1,5 +1,6 @@
 .form {
   margin: 0 auto;
+  padding-top: 16px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -10,7 +11,9 @@
       "achievements"
       "comment"
       "submit";
+    grid-row-gap: 64px;
     max-width: 620px;
+    padding-top: 82px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,68 +26,88 @@
       "comment comment"
       "submit submit";
     max-width: 940px;
+    padding-top: 70px;
   }
 }
 
 .form__element {
   border: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0 0 30px 0;
 
-.form__element:first-child {
-  @media (min-width: @tablet-width) {
-    grid-area: name;
-  }
-}
-
-.form__element:nth-child(2) {
-  @media (min-width: @tablet-width) {
-    grid-area: achievements;
-  }
-}
-
-.form__element:nth-child(3) {
-  @media (min-width: @tablet-width) {
-    grid-area: contacts;
-  }
-}
-
-.form__element:nth-child(4) {
-  @media (min-width: @tablet-width) {
-    grid-area: app-platforms;
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      grid-area: name;
+      padding: 0;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    width: 431px;
+  &:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      grid-area: achievements;
+    }
   }
-}
 
-.form__element:nth-child(5) {
-  @media (min-width: @tablet-width) {
-    grid-area: comment;
+  &:nth-child(3) {
+    @media (min-width: @tablet-width) {
+      grid-area: contacts;
+    }
   }
-}
 
-.form__element:nth-child(6) {
-  @media (min-width: @tablet-width) {
-    grid-area: submit;
+  &:nth-child(4) {
+    @media (min-width: @tablet-width) {
+      grid-area: app-platforms;
+      padding: 46px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 431px;
+      padding: 0;
+    }
   }
-}
 
-.form__element:not(:first-child) {
-  @media (min-width: @tablet-width) {
-    border: 2px solid @extra-light-gray;
-    border-radius: 1px;
+  &:nth-child(5) {
+    @media (min-width: @tablet-width) {
+      grid-area: comment;
+    }
   }
-}
 
-.form__element--achievements,
-.form__element--app-platforms {
-  background-color: @light-gray;
+  &:nth-child(6) {
+    @media (min-width: @tablet-width) {
+      grid-area: submit;
+    }
+  }
 
-  @media (min-width: @tablet-width) {
-    background: none;
+  &:not(:first-child) {
+    @media (min-width: @tablet-width) {
+      border: 2px solid @extra-light-gray;
+      border-radius: 1px;
+    }
+  }
+
+  &--achievements,
+  &--app-platforms {
+    background-color: @light-gray;
+
+    @media (min-width: @tablet-width) {
+      background: none;
+    }
+  }
+
+  & .form__description {
+    transform: translateY(75px);
+
+    @media (min-width: @tablet-width) {
+      transform: translateY(0);
+    }
+  }
+
+  &--comment .form__description {
+    transform: translateY(45px);
+
+    @media (min-width: @tablet-width) {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -155,6 +178,12 @@
   text-align: center;
 }
 
+.form__description br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .form__submit {
   font-size: 18px;
   line-height: 30px;
@@ -166,6 +195,22 @@
   background-color: @green;
   width: 276px;
   height: 59px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: @dark-green;
+    background-color: @dark-green;
+  }
+
+  &:disabled {
+    border-color: @extra-light-gray;
+    background-color: @extra-light-gray;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     width: 296px;
