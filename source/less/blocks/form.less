@@ -195,6 +195,22 @@
   background-color: @green;
   width: 276px;
   height: 59px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: @dark-green;
+    background-color: @dark-green;
+  }
+
+  &:disabled {
+    border-color: @extra-light-gray;
+    background-color: @extra-light-gray;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     width: 296px;
