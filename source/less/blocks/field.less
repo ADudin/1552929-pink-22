@@ -2,6 +2,19 @@
   margin-top: 29px;
   position: relative;
 
+  &--phone,
+  &--email {
+    @media (min-width: @desktop-width) {
+      width: 371px;
+    }
+  }
+
+  &--phone {
+    @media (min-width: @desktop-width) {
+      justify-self: end;
+    }
+  }
+
   /* phone & email images */
 
   @media (min-width: @tablet-width) {
@@ -10,7 +23,7 @@
       content: "";
       position: absolute;
       top: 2px;
-      right: 62px;
+      right: 2px;
       width: 59px;
       height: 59px;
       background-color: @extra-light-gray;
@@ -20,7 +33,7 @@
       content: "";
       position: absolute;
       top: 22px;
-      right: 80px;
+      right: 20px;
       width: 20px;
       height: 19px;
       background-image: url("../img/phone-icon.svg");
@@ -31,7 +44,7 @@
       content: "";
       position: absolute;
       top: 25px;
-      right: 81px;
+      right: 21px;
       width: 18px;
       height: 13px;
       background-image: url("../img/mail-icon.svg");
