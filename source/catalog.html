@@ -84,16 +84,16 @@
     <main class="page-main">
       <h1 class="visually-hidden">Галлерея фотографий пользователей</h1>
 
-      <div class="title">
+      <div class="title title--catalog">
 
-        <h2 class="title__text">Фотографии пользователей</h2>
+        <h2 class="title__text">Фотографии<br> пользователей</h2>
 
       </div>
 
       <section class="photo-gallery">
 
         <div class="photo-gallery__description">
-          <p class="photo-gallery__description-text">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+          <p class="photo-gallery__description-text">Взгляните на фотографии, которые выкладывают<br> пользователи!<br> Видите, как не хватает ваших?</p>
         </div>
 
         <ul class="photo-gallery__list">
@@ -229,16 +229,18 @@
 
         <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="POST">
 
-          <div class="photo-editor__upload">
+          <fieldset class="photo-editor__upload">
+            <legend class="visually-hidden">Форма для загрузки изображений</legend>
             <label class="photo-editor__drop-zone" for="user-photo">
               <img src="img/photo-7.jpg" alt="Выберите изображение для загрузки и предпросмотра" width="280" height="374">
             </label>
             <input class="photo-editor__input visually-hidden" type="file" id="user-photo" name="user-photo" accept="image/png, image/jpg, image/gif, image/svg, image/jpeg">
-          </div>
+          </fieldset>
 
           <div class="photo-editor__control__container">
 
-            <div class="photo-editor__tuning__container">
+            <fieldset class="photo-editor__tuning__container">
+              <legend class="visually-hidden">Форма для редактирования изображений</legend>
 
               <ul class="photo-editor__tuning-labels-list">
                 <li class="photo-editor__tuning-labels-list-item photo-editor__tuning-labels-list-item--active">
@@ -272,21 +274,48 @@
 
               <ul class="photo-editor__tuning-list">
                 <li class="photo-editor__tuning-list-item photo-editor__tuning-list-item--activ">
-                  <input class="photo-editor__tuning-list-item__crop-filter" id="crop-filter" name="crop-filter" type="range">
+                  <input class="photo-editor__tuning-list-item__crop-filter visually-hidden" id="crop-filter" name="crop-filter" type="range">
+                  <div class="photo-editor__range-filter photo-editor__range-filter--crop-filter">
+                    <div class="photo-editor__range-filter__control photo-editor__range-filter__control--crop-filter">
+                      <div class="photo-editor__range-filter__scale"></div>
+                      <!-- inline styles for script -->
+                      <div class="photo-editor__range-filter__toggle photo-editor__range-filter__toggle--crop-filter" tabindex="0" style="
+                        left: 84%
+                      "></div>
+                    </div>
+                  </div>
                 </li>
                 <li class="photo-editor__tuning-list-item">
-                  <input class="photo-editor__tuning-list-item__fill-filter" id="fill-filter" name="fill-filter" type="range">
+                  <input class="photo-editor__tuning-list-item__fill-filter visually-hidden" id="fill-filter" name="fill-filter" type="range">
+                  <div class="photo-editor__range-filter photo-editor__range-filter--fill-filter">
+                    <div class="photo-editor__range-filter__control photo-editor__range-filter__control--fill-filter">
+                      <div class="photo-editor__range-filter__scale"></div>
+                      <!-- inline styles for script -->
+                      <div class="photo-editor__range-filter__toggle photo-editor__range-filter__toggle--fill-filter" tabindex="0" style="
+                        left: 10%
+                      "></div>
+                    </div>
+                  </div>
                 </li>
                 <li class="photo-editor__tuning-list-item">
-                  <input class="photo-editor__tuning-list-item__contrast-filter" id="contrast-filter" name="contrast-filter" type="range">
+                  <input class="photo-editor__tuning-list-item__contrast-filter visually-hidden" id="contrast-filter" name="contrast-filter" type="range">
+                  <div class="photo-editor__range-filter photo-editor__range-filter--contrast-filter">
+                    <div class="photo-editor__range-filter__control photo-editor__range-filter__control--contrast-filter">
+                      <div class="photo-editor__range-filter__scale"></div>
+                      <!-- inline styles for script -->
+                      <div class="photo-editor__range-filter__toggle photo-editor__range-filter__toggle--contrast-filter" tabindex="0" style="
+                        left: 50%
+                      "></div>
+                    </div>
+                  </div>
                 </li>
               </ul>
 
-            </div>
+            </fieldset>
 
             <div class="photo-editor__buttons-wrapper">
-              <button class="photo-editor__button" type="submit">Запостить</button>
-              <button class="photo-editor__button" type="reset">Отмена</button>
+              <button class="photo-editor__button photo-editor__button--upload" type="submit">Запостить</button>
+              <button class="photo-editor__button photo-editor__button--cancel" type="reset">Отмена</button>
             </div>
 
           </div>
