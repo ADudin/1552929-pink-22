@@ -27,11 +27,11 @@
 }
 
 .photo-editor__form {
-  //max-width: 280px;
   padding-top: 20px;
   margin: 0 auto;
   display: grid;
   justify-content: center;
+  padding-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, min-content);
@@ -39,24 +39,27 @@
     grid-column-gap: 45px;
     max-width: 620px;
     padding-top: 57px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @light-gray;
     min-width: 940px;
     grid-column-gap: 90px;
+    padding-bottom: 57px;
   }
 }
 
 .photo-editor__control__container {
   @media (min-width: @tablet-width) {
     width: 275px;
-    //display: grid;
-    //grid-template-rows: min-content 1fr;
   }
 
   @media (min-width: @desktop-width) {
     width: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -183,6 +186,7 @@
   display: grid;
   grid-row-gap: 12px;
   justify-content: center;
+  padding-top: 38px;
 
   @media (min-width: @tablet-width) {
     grid-row-gap: 24px;
@@ -196,6 +200,8 @@
   }
 }
 
+/* buttons */
+
 .photo-editor__button {
   font-size: 18px;
   line-height: 18px;
@@ -207,6 +213,7 @@
   border-radius: 30px;
   width: 280px;
   height: 55px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 260px;
@@ -215,12 +222,40 @@
   @media (min-width: @desktop-width) {
     width: 183px;
   }
+
+  &--upload:hover,
+  &--upload:focus {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &--upload:active {
+    color: fade(@white, 30%);
+  }
+
+  &--cancel {
+    color: fade(@black-blue, 10%);
+    border-color: fade(@black-blue, 10%);
+  }
+
+  &--cancel:hover,
+  &--cancel:focus {
+    color: fade(@black-blue, 30%);
+    border-color: fade(@black-blue, 30%);
+  }
+
+  &--cancel:active {
+    color: fade(@white, 30%);
+    border-color: transparent;
+    background-color: fade(@black-blue, 30%);
+  }
 }
 
 /* range filter */
 
 .photo-editor__range-filter {
   width: 100vw;
+  overflow: hidden;
   border-bottom: 1px solid fade(@black-blue, 10%);
 
   @media (min-width: @tablet-width) {
